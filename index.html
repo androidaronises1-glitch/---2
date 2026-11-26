@@ -212,7 +212,7 @@ function showAll(back){
   add(text('div','Порядок сохранён как в исходном документе. Правильные ответы выделены красным.','muted'));
   [...QUESTIONS].sort((a,b)=>a.sourceNumber-b.sourceNumber||a.id-b.id).forEach(q=>{
     const card=document.createElement('section');card.className='card';card.appendChild(text('h3',`${q.sourceNumber}. ${q.text}`));
-    q.options.forEach((o,i)=>card.appendChild(text('div',`${letter(i)}) ${o}`,'option '+(q.correct.includes(i)?'correct':'')));
+    q.options.forEach((o,i)=>card.appendChild(text('div',`${letter(i)}) ${o}`,'option '+(q.correct.includes(i)?'correct':''))));
     add(card);
   });
   add(btn('Назад',returnFromAll));

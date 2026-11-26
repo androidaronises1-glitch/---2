@@ -80,11 +80,11 @@ function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Ma
 function unique(a){return [...new Set(a)];}
 function byId(id){return QUESTIONS.find(q=>q.id===id);}
 function allIds(){return shuffle(QUESTIONS.map(q=>q.id));}
-function top(){window.scrollTo(0,0);}
+function scrollToPageTop(){window.scrollTo(0,0);}
 function btn(label,fn,cls='',disabled=false){const b=document.createElement('button');b.textContent=label;b.className=cls;b.disabled=disabled;b.onclick=fn;return b;}
 function add(el){$app.appendChild(el);return el;}
 function text(tag,value,cls=''){const e=document.createElement(tag);e.textContent=value;e.className=cls;return e;}
-function clear(){ $app.innerHTML=''; top(); }
+function clear(){ $app.innerHTML=''; scrollToPageTop(); }
 
 function cleanState(){
   const valid=new Set(QUESTIONS.map(q=>q.id));

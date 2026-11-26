@@ -1,8 +1,9 @@
 {
   "name": "Тест ростехнадзор",
   "short_name": "Ростехнадзор",
+  "description": "Тренажёр вопросов Ростехнадзора",
   "lang": "ru",
-  "start_url": "./index.html",
+  "start_url": "./index.html?v=7",
   "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",

@@ -23,7 +23,7 @@
     button.primary{background:#176b36;color:#fff}button.danger{color:#a52020}button:disabled{opacity:.45}
     .question{font-size:20px;font-weight:700;line-height:1.35;margin:14px 0}
     .option{display:flex;gap:10px;align-items:flex-start;border:1px solid #dfe3e7;border-radius:12px;padding:13px 11px;margin:9px 0;font-size:16px;line-height:1.35;background:#fff}
-    .option input{width:22px;height:22px;flex:0 0 auto;margin-top:0}.option.correct{color:#c51e1e;font-weight:700;border-color:#e7a4a4;background:#fff5f5}.option.selected-wrong{color:#2456b4;font-weight:700;border-color:#9fb4df;background:#f3f7ff}.option.selected-correct{color:#c51e1e;font-weight:700;border:2px solid #c51e1e;background:#fff2f2}
+    .option input{width:22px;height:22px;flex:0 0 auto;margin-top:0}.option.correct{color:#18713b;font-weight:700;border-color:#83c99e;background:#f0fff5}.option.selected-wrong{color:#bd2222;font-weight:700;border-color:#e39a9a;background:#fff1f1}.option.selected-correct{color:#18713b;font-weight:700;border:2px solid #18713b;background:#edfff3}
     .result-good{color:#18713b}.result-bad{color:#bd2222}.card{border-top:1px solid #ddd;padding-top:12px;margin-top:14px}.badge{font-size:13px;font-weight:700}
     .sticky{position:sticky;top:calc(env(safe-area-inset-top));background:#fff;padding:5px 0 8px;z-index:2}
   </style>
@@ -188,7 +188,7 @@ function showResults(){
   clear();const good=batch.filter(a=>a.correct).length;
   add(text('h1',`Результат: ${good} из ${batch.length}`));
   add(text('div',`Выучено: ${state.learned.length} из ${QUESTIONS.length}`,'progress'));
-  add(text('div','Красный — правильный ответ. Синий — выбранный неправильный. Показаны все варианты ответа.','muted'));
+  add(text('div','Зелёный — правильный ответ. Красный — выбранный неправильный ответ. Показаны все варианты ответа.','muted'));
   batch.forEach((a,i)=>{
     const card=document.createElement('section');card.className='card';
     const h=text('h3',`${i+1}. ${a.correct?'Правильно':'Неправильно'} — ${a.q.text}`,a.correct?'result-good':'result-bad');card.appendChild(h);

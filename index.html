@@ -269,10 +269,7 @@ function grade(){
   }
   if(mode==='learned')updateLearnedQueueAfterTest();else syncLearnedQueue();
   checkAwards(newAwards);save();showResults();
-  if(newAwards.length)setTimeout(()=>alert('Новый приз!
-
-'+newAwards.join('
-')),50);
+  if(newAwards.length)setTimeout(()=>alert('Новый приз!\n\n'+newAwards.join('\n')),50);
 }
 function showResults(){
   clear();const good=batch.filter(a=>a.correct).length;

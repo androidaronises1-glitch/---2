@@ -189,7 +189,7 @@ function showPrizes(){
 }
 
 function showStart(){
-  cleanState();save();clear();
+  cleanState();checkAwards([]);save();clear();
   const img=document.createElement('img');img.src='icon.png';img.className='logo';img.alt='Ростехнадзор';add(img);
   add(text('h1','Тест ростехнадзор'));
   add(text('div',`Выучено: ${state.learned.length} из ${QUESTIONS.length}`,'progress'));
